@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Rebond';
+    src: url("../public/fonts/rebond.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'Chillax';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Chillax'), url('https://fonts.cdnfonts.com/s/85273/Chillax-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'Chillax';
+    font-style: normal;
+    font-weight: 200;
+    src: local('Chillax'), url('https://fonts.cdnfonts.com/s/85273/Chillax-Extralight.woff') format('woff');
+}
+@font-face {
+    font-family: 'Chillax';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Chillax'), url('https://fonts.cdnfonts.com/s/85273/Chillax-Light.woff') format('woff');
+}
+@font-face {
+    font-family: 'Chillax';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Chillax'), url('https://fonts.cdnfonts.com/s/85273/Chillax-Medium.woff') format('woff');
+}
+@font-face {
+    font-family: 'Chillax';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Chillax'), url('https://fonts.cdnfonts.com/s/85273/Chillax-Semibold.woff') format('woff');
+}
+@font-face {
+    font-family: 'Chillax';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Chillax'), url('https://fonts.cdnfonts.com/s/85273/Chillax-Bold.woff') format('woff');
+}
+
+@font-face {font-family: "Copyright Klim Type Foundry";
+    src: url("http://db.onlinewebfonts.com/t/21783cc8717e3989d1fcadd758d87b3c.eot"); /* IE9*/
+    src: url("http://db.onlinewebfonts.com/t/21783cc8717e3989d1fcadd758d87b3c.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("http://db.onlinewebfonts.com/t/21783cc8717e3989d1fcadd758d87b3c.woff2") format("woff2"), /* chrome firefox */
+    url("http://db.onlinewebfonts.com/t/21783cc8717e3989d1fcadd758d87b3c.woff") format("woff"), /* chrome firefox */
+    url("http://db.onlinewebfonts.com/t/21783cc8717e3989d1fcadd758d87b3c.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
+    url("http://db.onlinewebfonts.com/t/21783cc8717e3989d1fcadd758d87b3c.svg#Copyright Klim Type Foundry") format("svg"); /* iOS 4.1- */
+}
+
+
+@font-face {
+    font-family: 'Domaine Display Narrow Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Domaine Display Narrow Regular'), url('../public/fonts/DomaineDispNar-Regular.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Domaine Display Narrow Regular Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Domaine Display Narrow Regular Italic'), url('../public/fonts/DomaineDispNar-RegularItalic.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Domaine Display Narrow Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Domaine Display Narrow Medium'), url('../public/fonts/DomaineDispNar-Medium.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Domaine Display Narrow Medium Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Domaine Display Narrow Medium Italic'), url('../public/fonts/DomaineDispNar-MediumItalic.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Domaine Display Narrow Semibold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Domaine Display Narrow Semibold'), url('../public/fonts/DomaineDispNar-Semibold.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Domaine Display Narrow Semibold Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Domaine Display Narrow Semibold Italic'), url('../public/fonts/DomaineDispNar-SemiboldItalic.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Domaine Display Narrow Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Domaine Display Narrow Bold'), url('../public/fonts/DomaineDispNar-Bold.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Domaine Display Narrow Bold Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Domaine Display Narrow Bold Italic'), url('../public/fonts/DomaineDispNar-BoldItalic.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Domaine Display Narrow Extrabold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Domaine Display Narrow Extrabold'), url('../public/fonts/DomaineDispNar-Extrabold.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Domaine Display Narrow Extrabold Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Domaine Display Narrow Extrabold Italic'), url('../public/fonts/DomaineDispNar-ExtraboldItalic.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Domaine Display Narrow Black';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Domaine Display Narrow Black'), url('../public/fonts/DomaineDispNar-Black.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Domaine Display Narrow Black Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Domaine Display Narrow Black Italic'), url('../public/fonts/DomaineDispNar-BlackItalic.woff') format('woff');
+}
