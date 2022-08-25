@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import NavLogo from "./navlogo";
+import NavLogo from "../General/logo";
 
 const navigation = [
   { name: 'Inicio', href: '/' },

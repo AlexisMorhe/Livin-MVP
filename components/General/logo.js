@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function NavLogo() {
+export default function Logo() {
   return(
     <Link href='/pages'>
       <a className='text-3xl font-chillax flex items-center w-48'>
