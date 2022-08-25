@@ -1,11 +1,11 @@
-import Layout from '../components/layout';
-import Hero from '../components/hero'
-import Calculator from "../components/calculator";
-import Testimony1 from "../components/testimony1";
-import Testimony2 from "../components/testimony2";
-import Explanation from "../components/explanation";
-import Featuring from "../components/featuring";
-import Report from "../components/report";
+import Layout from '../components/Layout/layout';
+import Hero from '../components/Home/hero'
+import Calculator from "../components/Home/calculator";
+import Testimony1 from "../components/Home/testimony1";
+import Testimony2 from "../components/Home/testimony2";
+import Explanation from "../components/Home/explanation";
+import Featuring from "../components/Home/featuring";
+import Report from "../components/Home/report";
 
 export default function Home() {
   return (

@@ -11,7 +11,7 @@ export default function Hero() {
         <p className='font-rebond w-full my-4 text-xl'>Encuentra la casa de tus sueños, mudate ahora y rentala. Parte de renta se irá directo al enganche. Nuestro programa está diseñado para que puedas conseguir tu hipoteca en 3 años.</p>
         <div className='flex justify-between w-2/3'>
           <Link href='/cuestionario'><a className='my-4 w-fit py-3 px-9 bg-yellow-300 font-chillax font-medium rounded-md hover:bg-yellow-200 transition-all'>Consigue tu casa</a></Link>
-          <Link href='/vendetucasa'><a className='my-4 w-fit py-3 px-9 text-white bg-dark font-chillax font-medium rounded-md hover:bg-slate-700 transition-all'>Vende tu casa</a></Link>
+          <Link href='/pages/vendetucasa'><a className='my-4 w-fit py-3 px-9 text-white bg-dark font-chillax font-medium rounded-md hover:bg-slate-700 transition-all'>Vende tu casa</a></Link>
         </div>
       </div>
     </div>
