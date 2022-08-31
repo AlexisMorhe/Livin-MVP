@@ -1,28 +1,35 @@
 import {Carousel} from "flowbite-react";
+import Link from 'next/link'
 
 export default function Featuring() {
+
+  const slides = [
+    {
+      subtitle: 'Vende tu propiedad',
+      title: 'Las mejores tasas del mercado',
+      description: 'Trabajamos con todos los bancos para que recibas múltiples ofertas y escojas la que más se adapte a ti.',
+      href: '/tasas'
+    },
+    {
+      subtitle: 'Recibe más por tu casa',
+      title: 'Recibe hasta un 15% más',
+      description: 'Renta tu hogar y protegete de la incertidumbre, recibe un rendimiento extra por tu inmueble.',
+      href: '/rentas'
+    },
+  ]
+
   return (
     <div className='bg-off-white w-full flex justify-center'>
       <div className='w-3/5 px-10 bg-off-white relative h-[30vh] text-dark flex flex-col justify-center items-center'>
         <Carousel>
-          <div className="flex flex-col h-full items-center justify-center">
-            <p className='font-chillax text-center'>Vende tu propiedad</p>
-            <p className='font-rebond text-3xl font-semibold text-center'>Las mejores tasas del mercado</p>
-            <p className='font-rebond text-xl text-center'>Trabajamos con todos los bancos para que recibas múltiples ofertas de hipotecas y escojas la mejor.</p>
-            <p className='font-chillax text-center'>Ver más</p>
-          </div>
-          <div className="flex flex-col h-full items-center justify-center">
-            <p className='font-chillax text-center'>Vende tu propiedad</p>
-            <p className='font-rebond text-3xl text-center font-semibold'>Las mejores tasas del mercado</p>
-            <p className='font-rebond text-xl text-center'>Trabajamos con todos los bancos para que recibas múltiples ofertas de hipotecas y escojas la mejor.</p>
-            <p className='font-chillax text-center'>Ver más</p>
-          </div>
-          <div className="flex flex-col h-full items-center justify-center">
-            <p className='font-chillax text-center'>Vende tu propiedad</p>
-            <p className='font-rebond text-3xl text-center font-semibold'>Las mejores tasas del mercado</p>
-            <p className='font-rebond text-xl text-center'>Trabajamos con todos los bancos para que recibas múltiples ofertas de hipotecas y escojas la mejor.</p>
-            <p className='font-chillax text-center'>Ver más</p>
-          </div>
+          {slides.map(slide => (
+            <div className="flex flex-col h-full items-center justify-center">
+              <p className='font-chillax text-center'>{slide.subtitle}</p>
+              <p className='font-rebond text-3xl font-semibold text-center'>{slide.title}</p>
+              <p className='font-rebond text-xl text-center'>{slide.description}</p>
+              <Link href={slide.href}><a className='font-chillax text-center'>Ver más</a></Link>
+            </div>
+            ))}
         </Carousel>
       </div>
     </div>
