@@ -2,16 +2,25 @@ import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 
-export default function ComboBox() {
+export default function ComboBox({setDireccion}) {
   return (
     <Autocomplete
-      disablePortal
-      id="combo-box-demo"
+      style={{ width: 500 }}
+      multiple
+      id="tags-standard"
       options={direcciones}
-      sx={{ width: 400 }}
-      renderInput={(params) => <TextField {...params} label="Escribe zonas, colonias, ciudades..." />}
+      getOptionLabel={(option) => option.label}
+      renderInput={(params) => (
+        <TextField
+          {...params}
+          variant="standard"
+          label="Selecciona la colonia"
+          placeholder="Puedes escoger más de una opción"
+          onChange={(e) => setDireccion(e.target.value)}
+        />
+      )}
     />
-  );
+  )
 }
 
 const direcciones = [
