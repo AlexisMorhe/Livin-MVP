@@ -1,14 +1,31 @@
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
+import {useEffect, useState} from "react";
+import {useForm} from "../../context/formContext";
 
-export default function ComboBox({setDireccion}) {
+export default function MapsInput({formChanges}) {
+
+  const { form, setForm } = useForm();
+  const [direcciones, setDirecciones] = useState([])
+
+  useEffect(() => {
+    setForm({
+      ...form,
+      'direcciones': [direcciones],
+    })
+  }, [direcciones]);
+
+  const handleChange = e => {
+    setDirecciones( prevDirecciones => [...prevDirecciones, e.target.value]);
+  }
+
   return (
     <Autocomplete
       style={{ width: 500 }}
       multiple
       id="tags-standard"
-      options={direcciones}
+      options={options}
       getOptionLabel={(option) => option.label}
       renderInput={(params) => (
         <TextField
@@ -16,14 +33,14 @@ export default function ComboBox({setDireccion}) {
           variant="standard"
           label="Selecciona la colonia"
           placeholder="Puedes escoger más de una opción"
-          onChange={(e) => setDireccion(e.target.value)}
+          name={'direccion'}
         />
       )}
     />
   )
 }
 
-const direcciones = [
+const options = [
   {label: 'Las Villas', ciudad: 'Torreon, Coahuila'},
   {label: 'San Isidro', ciudad: 'Torreon, Coahuila'},
   {label: 'Roma', ciudad: 'Ciudad de México'},
