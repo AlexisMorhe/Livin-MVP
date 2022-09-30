@@ -11,8 +11,11 @@ const Step6 = ({}) => {
   }
 
   const postData = async (form) => {
+    form.nombre = nombre.toString()
+    form.presupuesto = parseInt(presupuesto)
+    form.ahorros = parseInt(ahorros)
+    console.log(form)
     try {
-      console.log(form)
       const res = await fetch('/api/user', {
         method: 'POST',
         headers: {

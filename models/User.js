@@ -2,15 +2,15 @@ import mongoose from "mongoose";
 
 const UserSchema = new mongoose.Schema({
   nombre: {
-    type: Array,
+    type: String,
     required: [true, 'Nombre no ingresado']
   },
   presupuesto: {
-    type: Array,
+    type: Number,
     required: [true, 'Presupuesto no ingresado']
   },
   ahorros: {
-    type: Array,
+    type: Number,
     required: [true, 'Ahorros no ingresados']
   },
   direcciones: {

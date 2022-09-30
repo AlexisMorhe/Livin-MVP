@@ -22,8 +22,8 @@ export default function Featuring() {
     <div className='bg-off-white w-full flex justify-center'>
       <div className='w-3/5 px-10 bg-off-white relative h-[30vh] text-dark flex flex-col justify-center items-center'>
         <Carousel>
-          {slides.map(slide => (
-            <div className="flex flex-col h-full items-center justify-center">
+          {slides.map((slide, index) => (
+            <div key={index} className="flex flex-col h-full items-center justify-center">
               <p className='font-chillax text-center'>{slide.subtitle}</p>
               <p className='font-rebond text-3xl font-semibold text-center'>{slide.title}</p>
               <p className='font-rebond text-xl text-center'>{slide.description}</p>
