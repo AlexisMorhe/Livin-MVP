@@ -27,7 +27,7 @@ export default function MapsInput({houses}) {
             name='estado'
             onChange={handleChange}
           >
-            {houses.map(house => <MenuItem value={house.estado}>{house.estado}</MenuItem>)}
+            {houses.map((house) => <MenuItem key={house._id} value={house.estado}>{house.estado}</MenuItem>)}
           </Select>
         </FormControl>
       </div>
@@ -40,7 +40,7 @@ export default function MapsInput({houses}) {
             onChange={handleChange}
           >
             {houses.filter(house => house.estado == estado[0]).map(house => {
-              return <MenuItem value={house.ciudad}>{house.ciudad}</MenuItem>
+              return <MenuItem key={house._id} value={house.ciudad}>{house.ciudad}</MenuItem>
             })}
           </Select>
         </FormControl>
@@ -54,7 +54,7 @@ export default function MapsInput({houses}) {
             onChange={handleChange}
           >
             {houses.filter(house => house.ciudad == ciudad[0]).map(house => {
-              return <MenuItem value={house.colonia}>{house.colonia}</MenuItem>
+              return <MenuItem key={house._id} value={house.colonia}>{house.colonia}</MenuItem>
             })}
           </Select>
         </FormControl>

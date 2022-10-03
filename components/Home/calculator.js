@@ -37,7 +37,7 @@ export default function Calculator() {
             rentas obtenemos tu enganche.</p>
           <p className='font-rebond text-xl my-5'>Precalifica en línea y recibe una respuesta en menos de 5 minutos.</p>
         </div>
-        <Link href='/'><a
+        <Link href='/registro'><a
           className='py-3 px-9 text-center bg-dark text-white font-chillax font-medium rounded-md hover:bg-yellow-300 transition-all'>Proceso
           de preaprobación</a></Link>
       </div>
