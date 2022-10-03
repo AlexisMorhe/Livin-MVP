@@ -1,9 +1,11 @@
 import {useForm} from "../../context/formContext";
+import {useRouter} from "next/router";
 
 const Step6 = ({}) => {
 
   const { form } = useForm();
-  const {nombre, presupuesto, ahorros, direcciones, habitaciones} = form;
+  const router = useRouter();
+  const {nombre, ingreso, ahorros, estado, ciudad, colonia, habitaciones} = form;
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -11,10 +13,14 @@ const Step6 = ({}) => {
   }
 
   const postData = async (form) => {
-    form.nombre = nombre.toString()
-    form.presupuesto = parseInt(presupuesto)
-    form.ahorros = parseInt(ahorros)
-    console.log(form)
+    form.nombre = nombre.toString();
+    form.estado = estado.toString();
+    form.ciudad = ciudad.toString();
+    form.colonia = colonia.toString();
+    form.ingreso = parseInt(ingreso);
+    form.ahorros = parseInt(ahorros);
+    form.habitaciones = habitaciones[0];
+    console.log(form);
     try {
       const res = await fetch('/api/user', {
         method: 'POST',
@@ -26,8 +32,9 @@ const Step6 = ({}) => {
 
       const data = await res.json();
       console.log(data);
-
+      router.push('/bienvenido')
     } catch (err) {
+      console.log(form);
       console.log(err)
     }
   }
@@ -35,11 +42,12 @@ const Step6 = ({}) => {
   return(
     <div className='relative w-full justify-center items-center flex flex-col mt-40'>
       <p className='text-xl font-medium w-3/5 text-center mb-10'>Hola {nombre}</p>
+      <p className='text-xl font-medium w-3/5 text-center mb-10'>Estos son tus datos:</p>
       <p className='text-xl font-medium w-3/5 text-center mb-10'>Tus ahorros: {ahorros}</p>
-      <p className='text-xl font-medium w-3/5 text-center mb-10'>Tus ingresos: {presupuesto}</p>
+      <p className='text-xl font-medium w-3/5 text-center mb-10'>Tus ingresos: {ingreso}</p>
       <p className='text-xl font-medium w-3/5 text-center mb-10'>Buscas casas con este número de habitaciones: {habitaciones}</p>
-      <p className='text-xl font-medium w-3/5 text-center mb-10'>Buscas casas en estas direcciones: {direcciones}</p>
-      <p className='text-xl font-medium w-3/5 text-center mb-10'>Puedes obtener un credito de hasta: {presupuesto * 6}</p>
+      <p className='text-xl font-medium w-3/5 text-center mb-10'>{`Buscas casas en estas direcciones: ${colonia}, ${ciudad}, ${estado}`}</p>
+      <p className='text-xl font-medium w-3/5 text-center mb-10'>Puedes obtener un credito de hasta: {((ahorros / 36) + ingreso) * 40}</p>
       <button onClick={handleSubmit} className='font-chillax font-medium rounded-md py-3 w-80 bg-yellow-300 text-dark
      active:scale-105 transition-all'>
         Finalizar

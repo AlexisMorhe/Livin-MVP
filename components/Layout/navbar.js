@@ -33,7 +33,7 @@ export default function Navbar() {
         </div>
         <div className='w-1/4 flex items-center'>
           <Link href='/login'><a className='relative py-2 font-chillax font-medium mr-4 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-center after:scale-0 after:bg-yellow-300 after:opacity-0 after:transition-all hover:after:scale-100 hover:after:opacity-100'>Iniciar sesión</a></Link>
-          <Link href='/cotizar'><a className='py-3 px-9 bg-yellow-300 font-chillax font-medium rounded-md hover:bg-yellow-200 transition-all'>Recibir cotización</a></Link>
+          <Link href='/registro'><a className='py-3 px-10 mx-4 bg-yellow-300 font-chillax font-medium rounded-md hover:bg-yellow-200 transition-all'>Registrate</a></Link>
         </div>
       </div>
   </div>

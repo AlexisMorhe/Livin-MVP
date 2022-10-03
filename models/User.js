@@ -5,7 +5,7 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Nombre no ingresado']
   },
-  presupuesto: {
+  ingreso: {
     type: Number,
     required: [true, 'Presupuesto no ingresado']
   },
@@ -13,9 +13,17 @@ const UserSchema = new mongoose.Schema({
     type: Number,
     required: [true, 'Ahorros no ingresados']
   },
-  direcciones: {
-    type: Array,
-    required: [true, 'Direccion no ingresada']
+  ciudad: {
+    type: String,
+    required: [true, 'Ciudad no ingresada']
+  },
+  estado: {
+    type: String,
+    required: [true, 'Estado no ingresado']
+  },
+  colonia: {
+    type: String,
+    required: [true, 'Colonia no ingresada']
   },
   habitaciones: {
     type: Array,

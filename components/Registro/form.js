@@ -9,14 +9,14 @@ import SwipeableViews from "react-swipeable-views";
 import React from "react";
 import {useForm} from "../../context/formContext";
 
-const Form = ({ handleStepChange, nextStep }) => {
+const Form = ({ handleStepChange, nextStep, houses }) => {
 
   const { step, setStep } = useForm();
 
   return(
     <SwipeableViews index={step} onChangeIndex={handleStepChange}>
       <Start nextStep={nextStep} />
-      <Step1 />
+      <Step1 houses={houses} />
       <Step2 />
       <Step3 />
       <Step4 />

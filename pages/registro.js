@@ -4,8 +4,10 @@ import Previous from "../components/Registro/previous";
 import Next from "../components/Registro/next";
 import {Carousel} from "flowbite-react";
 import {useForm} from "../context/formContext";
+import House from '../models/House';
+import dbConnect from "../lib/dbConnect";
 
-export default function Registro() {
+export default function Registro({houses}) {
 
   const slides = [
     'Elige una propiedad y mudate sin dar enganche',
@@ -33,7 +35,7 @@ export default function Registro() {
         <Logo />
       </div>
       <div className='w-1/2 bg-gray-50 relative h-full flex flex-col items-center justify-center pr-10 z-10'>
-        <Form handleStepChange={handleStepChange} nextStep={nextStep}/>
+        <Form houses={houses} handleStepChange={handleStepChange} nextStep={nextStep}/>
         <div className={`${step === 0 || step === 6 ? 'bottom-[-100px]' : 'bottom-52'} transition-all  absolute h-20 flex justify-center items-end`}>
           <Previous prevStep={prevStep} />
           <Next nextStep={nextStep} />
@@ -46,4 +48,20 @@ export default function Registro() {
       </div>
     </div>
   )
+}
+
+export async function getStaticProps({params}) {
+  await dbConnect();
+  const results = await House.find({}).lean();
+  const houses = results.map(house => {
+    house._id = house._id.toString();
+    house.ciudad = house.ciudad.toString();
+    house.estado = house.estado.toString();
+    house.colonia = house.colonia.toString();
+    house.habitaciones = parseInt(house.habitaciones);
+    house.metros_terreno = parseInt(house.metros_terreno);
+    house.metros_construccion = parseInt(house.metros_construccion);
+    return house
+  });
+  return { props: { houses } }
 }
