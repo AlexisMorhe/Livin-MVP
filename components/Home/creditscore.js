@@ -28,7 +28,7 @@ export default function CreditScore() {
 
 
   return(
-      <div className='bg-gray-100 rounded-xl w-4/5 h-4/6 flex'>
+      <div className='bg-gray-100 rounded-xl w-4/5 h-4/6 flex drop-shadow-2xl'>
         <div className='rounded-l-xl bg-dark w-1/2 h-full flex flex-col p-12'>
           <p className='font-chillax text-xl text-white font-medium'>Informe hipotecario</p>
           <p className='font-rebond text-4xl font-medium text-white my-5'>¡Vas por buen camino!</p>
