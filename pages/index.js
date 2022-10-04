@@ -4,7 +4,7 @@ import Calculator from "../components/Home/calculator";
 import Explanation from "../components/Home/explanation";
 import Featuring from "../components/Home/featuring";
 import Report from "../components/Home/report";
-import Testimonio from "../components/Home/Testimonio";
+import Testimonio from "../components/Home/testimonio";
 
 export default function Home() {
   return (

@@ -5,7 +5,7 @@ import NavLogo from "../General/logo";
 const navigation = [
   { name: 'Inicio', href: '/' },
   { name: 'Agentes', href: '/agentes' },
-  { name: 'Cómo Funciona', href: '/funcionamiento' },
+  { name: 'Cómo Funciona', href: '/como-funciona' },
   { name: 'Buscar Hogar', href: '/buscar' },
   { name: 'Acerca De', href: '/acerca' },
 ]
