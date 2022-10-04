@@ -3,7 +3,7 @@ import {IoCheckmark} from "react-icons/io5";
 
 export default function Ventajas() {
   return(
-    <div className='w-3/4 flex font-rebond text-center text-lg text-dark'>
+    <div className='w-3/4 flex font-rebond text-center text-lg text-dark drop-shadow-xl'>
       <div className='flex flex-col w-1/4 text-start'>
         <div className='py-3 pl-3 bg-gray-200 h-14 font-semibold rounded-tl-lg'>Ventajas</div>
         <div className='py-3 pl-3 bg-white h-14'>Vende en un mes</div>
@@ -13,7 +13,7 @@ export default function Ventajas() {
         <div className='py-3 pl-3 bg-white h-14'>Ahorro en comisiones</div>
         <div className='py-3 pl-3 bg-white rounded-bl-lg h-14'>Ingresos extra gracias al alquiler</div>
       </div>
-      <div className='flex flex-col w-1/4 scale-110 text-white'>
+      <div className='flex flex-col w-1/4 scale-110 text-white drop-shadow-xl'>
         <div className='py-3 pl-3 bg-dark font-semibold h-14 flex justify-center items-center rounded-t-lg'>Si vendes hoy con Livin</div>
         <div className='py-3 pl-3 bg-dark h-14 flex justify-center items-center'><IoCheckmark size={30}/></div>
         <div className='py-3 pl-3 bg-dark h-14 flex justify-center items-center'><IoCheckmark size={30}/></div>
