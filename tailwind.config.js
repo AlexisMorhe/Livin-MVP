@@ -27,6 +27,7 @@ module.exports = {
         'dark': 'rgb(28, 36, 48)',
         'bluey': 'rgb(73, 124, 146)',
         'off-white': 'rgb(244, 244, 244)',
+        'darkblue': 'rgb(10, 78, 108)'
       }
     },
   },

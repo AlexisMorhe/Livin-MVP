@@ -5,16 +5,16 @@ export default function Featuring() {
 
   const slides = [
     {
-      subtitle: 'Vende tu propiedad',
+      subtitle: 'Créditos a tu medida',
       title: 'Las mejores tasas del mercado',
       description: 'Trabajamos con todos los bancos para que recibas múltiples ofertas y escojas la que más se adapte a ti.',
-      href: '/tasas'
+      href: '/como-funciona'
     },
     {
-      subtitle: 'Recibe más por tu casa',
-      title: 'Recibe hasta un 15% más',
-      description: 'Renta tu hogar y protegete de la incertidumbre, recibe un rendimiento extra por tu inmueble.',
-      href: '/rentas'
+      subtitle: 'No esperes al banco',
+      title: 'Múdate sin dar enganche',
+      description: 'Múdate a tu nuevo hogar sin tener que esperar la aprobación de un crédito ni desembolsar un enganche.',
+      href: '/como-funciona'
     },
   ]
 
@@ -25,9 +25,9 @@ export default function Featuring() {
           {slides.map((slide, index) => (
             <div key={index} className="flex flex-col h-full items-center justify-center">
               <p className='font-chillax text-center'>{slide.subtitle}</p>
-              <p className='font-rebond text-3xl font-semibold text-center'>{slide.title}</p>
-              <p className='font-rebond text-xl text-center'>{slide.description}</p>
-              <Link href={slide.href}><a className='font-chillax text-center'>Ver más</a></Link>
+              <p className='font-rebond my-2 text-3xl font-semibold text-center'>{slide.title}</p>
+              <p className='font-rebond my-2 text-xl text-center'>{slide.description}</p>
+              <Link href={slide.href}><a className='mt-3 font-chillax text-center'>Ver más</a></Link>
             </div>
             ))}
         </Carousel>
