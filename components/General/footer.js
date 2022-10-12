@@ -25,12 +25,12 @@ export default function Footer() {
         <div className='ml-96 h-1/2 flex flex-col'>
           <p className='font-medium mb-5'>Ubicaciones</p>
           <div className='flex justify-between'>
-            <p className='w-40 mb-5'>Ciudad de México</p>
-            <p className='w-40 mb-5'>Monterrey, NL</p>
+            <p className='w-48 mb-5'>Ciudad de México</p>
+            <p className='w-48 mb-5'>Monterrey, NL</p>
           </div>
           <div className='flex justify-between'>
-            <p className='w-40 mb-5'>Torreón, Coahuila</p>
-            <p className='w-40 mb-5'>Pachuca, Hidalgo</p>
+            <p className='w-48 mb-5'>Torreón, Coahuila</p>
+            <p className='w-48 mb-5'>Pachuca, Hidalgo</p>
           </div>
         </div>
         <div className='ml-52 h-1/2 flex flex-col'>
@@ -46,7 +46,7 @@ export default function Footer() {
         </div>
       </div>
       <div className='w-fit h-2/5 pb-20 flex justify-center items-end'>
-        <p>Livin, SAPI. 2022.</p>
+        <p>2022 LIVIN S.A.P.I. de C.V. - Todos los derechos reservados</p>
       </div>
     </footer>
   )
