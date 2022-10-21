@@ -8,6 +8,8 @@ export default function FormProvider({ children }) {
   const [step, setStep] = useState(0);
   const [form, setForm] = useState({
     nombre: '',
+    correo: '',
+    clave: '',
     ingreso: 1000,
     ahorros: 100000,
     ciudad: '',

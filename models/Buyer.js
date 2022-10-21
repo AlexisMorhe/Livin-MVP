@@ -1,9 +1,17 @@
 import mongoose from "mongoose";
 
-const UserSchema = new mongoose.Schema({
+const BuyerSchema = new mongoose.Schema({
   nombre: {
     type: String,
     required: [true, 'Nombre no ingresado']
+  },
+  correo: {
+    type: String,
+    required: [true, 'Correo no ingresado']
+  },
+  clave: {
+    type: String,
+    required: [true, 'Clave no ingresada']
   },
   ingreso: {
     type: Number,
@@ -31,4 +39,4 @@ const UserSchema = new mongoose.Schema({
   },
 });
 
-export default mongoose.models.User || mongoose.model('User', UserSchema);
+export default mongoose.models.Buyer || mongoose.model('Buyer', BuyerSchema);

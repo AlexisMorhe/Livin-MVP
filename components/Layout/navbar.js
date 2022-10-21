@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import NavLogo from "../General/logo";
+import NavLogo from "./logo";
 
 const navigation = [
   { name: 'Inicio', href: '/' },
@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <div className='w-full overflow-x-clip bg-gray-50 text-dark'>
-      <div className='w-full h-24 pt-1 bg-white flex justify-center items-center fixed bg-gray-50 z-20 shadow-md'>
+      <div className='hidden w-full h-24 pt-1 md:flex justify-center items-center fixed bg-gray-50 z-20 shadow-md'>
         <div className='w-3/4 flex'>
           <div className='ml-[8.2rem]'>
             <NavLogo />
@@ -36,6 +36,7 @@ export default function Navbar() {
           <Link href='/registro'><a className='py-3 px-10 mx-4 bg-yellow-300 font-chillax font-medium rounded-md hover:bg-yellow-200 transition-all'>Registrate</a></Link>
         </div>
       </div>
+      <div className='w-full h-28 pt-1 bg-white flex justify-around items-center fixed z-20 shadow-sm'></div>
   </div>
 
   )

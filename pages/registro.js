@@ -1,4 +1,4 @@
-import Logo from "../components/General/logo";
+import Logo from "../components/Layout/logo";
 import Form  from '../components/Registro/form';
 import Previous from "../components/Registro/previous";
 import Next from "../components/Registro/next";
@@ -35,8 +35,8 @@ export default function Registro({houses}) {
         <Logo />
       </div>
       <div className='w-1/2 bg-gray-50 relative h-full flex flex-col items-center justify-center pr-10 z-10'>
-        <Form houses={houses} handleStepChange={handleStepChange} nextStep={nextStep}/>
-        <div className={`${step === 0 || step === 6 ? 'bottom-[-100px]' : 'bottom-52'} transition-all  absolute h-20 flex justify-center items-end`}>
+        <Form houses={houses} handleStepChange={handleStepChange} prevStep={prevStep} nextStep={nextStep}/>
+        <div className={`${step === 0 || step === 7 ? 'bottom-[-100px]' : 'bottom-52'} transition-all  absolute h-20 flex justify-center items-end`}>
           <Previous prevStep={prevStep} />
           <Next nextStep={nextStep} />
         </div>

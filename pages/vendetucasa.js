@@ -1,6 +1,6 @@
 import HeroVenta from "../components/VendeTuCasa/heroventa";
-import Footer from "../components/General/footer";
-import NavLogo from "../components/General/logo";
+import Footer from "../components/Layout/footer";
+import NavLogo from "../components/Layout/logo";
 import Ventajas from "../components/VendeTuCasa/ventajas";
 
 export default function VendeTuCasa() {

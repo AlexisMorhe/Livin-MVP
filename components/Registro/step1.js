@@ -1,5 +1,4 @@
 import MapsInput from "./mapsinput";
-import conectarDB from "../../lib/dbConnect";
 
 export default function Step1({houses}) {
   return(

@@ -1,12 +1,10 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import {useForm} from "../../context/formContext";
-import conectarDB from "../../lib/dbConnect";
-import {Fragment, useEffect} from "react";
+
 
 export default function MapsInput({houses}) {
 
