@@ -53,7 +53,7 @@ export default function CreditScore() {
                 <div className='h-1/4 px-20 flex flex-col border-b-2 rounded-r-xl justify-center' key={index}>
                   <div className='flex'>
                     <div className='pr-3'>{getIcon()}</div>
-                    <p className='font-rebond text-xl font-semibold'>{situacion.titulo}</p>
+                    <p className='font-rebond text-sm xl:text-xl font-semibold'>{situacion.titulo}</p>
                   </div>
                   <div className='flex p-3'>
                     <div className='pt-[4px] pr-3'><BsFillPersonFill /></div>

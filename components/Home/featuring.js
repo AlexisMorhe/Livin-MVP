@@ -19,7 +19,7 @@ export default function Featuring() {
   ]
 
   return (
-    <div className='bg-off-white w-full flex justify-center'>
+    <div className='bg-off-white w-1/2 xl:w-full flex justify-center'>
       <div className='w-3/5 px-10 bg-off-white relative h-[30vh] text-dark flex flex-col justify-center items-center'>
         <Carousel>
           {slides.map((slide, index) => (

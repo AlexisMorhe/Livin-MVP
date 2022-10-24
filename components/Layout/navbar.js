@@ -36,7 +36,7 @@ export default function Navbar() {
           <Link href='/registro'><a className='py-3 px-10 mx-4 bg-yellow-300 font-chillax font-medium rounded-md hover:bg-yellow-200 transition-all'>Registrate</a></Link>
         </div>
       </div>
-      <div className='w-full h-28 pt-1 bg-white flex justify-around items-center fixed z-20 shadow-sm'></div>
+      {/*<div className='h-28 pt-1 bg-white flex justify-around items-center fixed z-20 shadow-sm'></div>*/}
   </div>
 
   )

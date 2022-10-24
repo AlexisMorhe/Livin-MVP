@@ -7,7 +7,8 @@ const BuyerSchema = new mongoose.Schema({
   },
   correo: {
     type: String,
-    required: [true, 'Correo no ingresado']
+    required: [true, 'Correo no ingresado'],
+    unique: true,
   },
   clave: {
     type: String,

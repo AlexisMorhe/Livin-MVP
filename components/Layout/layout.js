@@ -9,6 +9,7 @@ export default function Layout({title, description, children}) {
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
+        <meta initial-scale='1.0' />
         <link rel="icon" href="/public/favicon.ico" />
       </Head>
       <main className='w-full bg-gray-50'>

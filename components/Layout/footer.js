@@ -10,9 +10,9 @@ export default function Footer() {
   ]
 
   return (
-    <footer className='w-full h-[70vh] pl-[8.2rem] bg-dark font-chillax text-white'>
+    <footer className='w-full h-[70vh] xl:pl-[8.2rem] bg-dark font-chillax text-white'>
       <div className='h-3/5 w-full pt-10 flex'>
-        <div className='text-3xl flex flex-col w-52'>
+        <div className='text-3xl flex flex-col w-1/5 xl:w-52'>
           <div className='flex mr-2'>
             <img className='w-7 mr-3' src='/static/livin-white_logo.svg' />
             <p className='mt-1 font-medium'>Liv<span className='font-semibold'>in</span></p>
@@ -22,22 +22,22 @@ export default function Footer() {
             <p className='text-yellow-300'>soporte@livin.mx</p>
           </div>
         </div>
-        <div className='ml-96 h-1/2 flex flex-col'>
+        <div className='ml-0 xl:ml-96 h-1/2 flex flex-col'>
           <p className='font-medium mb-5'>Ubicaciones</p>
           <div className='flex justify-between'>
-            <p className='w-48 mb-5'>Ciudad de México</p>
-            <p className='w-48 mb-5'>Monterrey, NL</p>
+            <p className='w-1/2 xl:w-48 mb-5'>Ciudad de México</p>
+            <p className='w-1/2 xl:w-48 mb-5'>Monterrey, NL</p>
           </div>
           <div className='flex justify-between'>
-            <p className='w-48 mb-5'>Torreón, Coahuila</p>
-            <p className='w-48 mb-5'>Pachuca, Hidalgo</p>
+            <p className='w-1/2 xl:w-48 mb-5'>Torreón, Coahuila</p>
+            <p className='w-1/2 xl:w-48 mb-5'>Pachuca, Hidalgo</p>
           </div>
         </div>
-        <div className='ml-52 h-1/2 flex flex-col'>
+        <div className='ml-0 xl:ml-52 h-1/2 flex flex-col'>
           <p className='font-medium mb-5'>Recursos</p>
           {navigation.map((link, index) => <Link key={index} href={link.href}><a className='mb-5'>{link.name}</a></Link>)}
         </div>
-        <div className='ml-52 h-1/2 flex flex-col'>
+        <div className='ml-0 xl:ml-52 h-1/2 flex flex-col'>
           <p className='font-medium mb-5'>Siguenos</p>
           <p className='mb-5'>Facebook</p>
           <p className='mb-5'>Twitter</p>
