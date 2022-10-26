@@ -17,6 +17,7 @@ export default function FormProvider({ children }) {
     colonia: '',
     habitaciones: [[],[]],
   });
+  const [menu, setMenu] = useState(false);
 
   const formChanges = e => {
     const { name, value } = e.target;
@@ -27,7 +28,7 @@ export default function FormProvider({ children }) {
   }
 
   return (
-    <FormContext.Provider value={{ step, setStep, form, formChanges, setForm }}>
+    <FormContext.Provider value={{ step, setStep, form, formChanges, setForm, menu, setMenu }}>
       { children }
     </FormContext.Provider>)
 };
