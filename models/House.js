@@ -17,13 +17,25 @@ const HouseSchema = new mongoose.Schema({
     type: Number,
     required: [true, 'Habitaciones no ingresadas']
   },
-  metros_terreno: {
+  terreno: {
     type: Number,
     required: [true, 'Metros de terreno no ingresados']
   },
-  metros_construccion: {
+  construccion: {
     type: Number,
     required: [true, 'Metros de construcción no ingresados']
+  },
+  precio: {
+    type: Number,
+    required: [true, 'Precio no ingresado']
+  },
+  descripcion: {
+    type: String,
+    required: [true, 'Descripción no ingresada']
+  },
+  imagenes: {
+    type: Array,
+    required: [true, 'Imagen no subida.']
   }
 });
 

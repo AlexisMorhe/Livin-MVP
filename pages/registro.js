@@ -59,8 +59,9 @@ export async function getStaticProps({params}) {
     house.estado = house.estado.toString();
     house.colonia = house.colonia.toString();
     house.habitaciones = parseInt(house.habitaciones);
-    house.metros_terreno = parseInt(house.metros_terreno);
-    house.metros_construccion = parseInt(house.metros_construccion);
+    house.terreno = parseInt(house.terreno);
+    house.construccion = parseInt(house.construccion);
+    house.descripcion = house.descripcion.toString();
     return house
   });
   return { props: { houses } }

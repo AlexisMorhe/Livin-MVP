@@ -40,7 +40,7 @@ export default async function loginHandler(req, res) {
     const user = await Seller.findOne({'correo': correo, 'clave': clave})
     let token = await new SignJWT({
       usuario: user,
-      tipo: 'comprador',
+      tipo: 'vendedor',
       exp: Math.floor(Date.now() / 1000) + 60 * 60 * 24,
     })
       .setProtectedHeader({ alg: 'HS256'})

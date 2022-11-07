@@ -8,8 +8,8 @@ const navigation = [
   { name: 'Inicio', href: '/' },
   { name: 'Agentes', href: '/agentes' },
   { name: 'Cómo Funciona', href: '/como-funciona' },
-  { name: 'Buscar Hogar', href: '/buscar' },
-  { name: 'Acerca De', href: '/acerca' },
+  { name: 'Buscar Hogar', href: '/casas' },
+  { name: 'Publicar', href: '/publicar' },
 ]
 
 export default function Navbar() {
