@@ -1,4 +1,4 @@
-import House from '../../models/house';
+import House from '../../models/House';
 import conectarDB from "../../lib/dbConnect";
 
 
